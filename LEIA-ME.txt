@@ -1,0 +1,67 @@
+MASTER FUNÇÕES — 17 sites estáticos
+=====================================
+
+Cada pasta dentro de uma categoria é um site independente.
+Para publicar: suba a pasta do site (a que contém o index.html) como um
+projeto no Cloudflare Pages e ligue o domínio dele.
+
+PDF/
+  organizar-pdf ................ juntar, dividir, extrair, remover páginas e girar
+  imagem-para-pdf .............. fotos -> um PDF
+  assinar-pdf .................. desenhar/digitar/enviar assinatura e posicionar
+
+Conversores/
+  comprimir-e-converter-imagem . JPG/PNG/WebP, qualidade, largura máxima, .zip
+  conversor-de-audio-e-video ... MP3, M4A, WAV, OGG, MP4, WebM, GIF + corte
+  conversor-de-unidades ........ 8 categorias
+  conversor-de-moedas .......... cotação diária pública (fawazahmed0 currency-api)
+  conversor-de-dados ........... Base64, URL, JSON, CSV<->JSON, timestamp
+
+Editores/
+  editor-de-foto ............... cortar, girar, espelhar, brilho, contraste, redimensionar
+  remover-fundo ................ IA no navegador (@imgly/background-removal)
+
+Calculadoras/
+  calculadora-trabalhista ...... salário líquido, férias, 13º e rescisão (tabelas 2026)
+  juros-e-financiamento ........ juros compostos + Price/SAC
+  calculadora-de-porcentagem
+  calculadora-de-imc
+
+Texto/
+  gerador-de-senha
+  contador-de-palavras
+  comparador-de-texto
+
+
+TESTAR NO SEU COMPUTADOR
+------------------------
+A maioria abre com dois cliques no index.html.
+Dois precisam de um servidor local (não abrem direto do arquivo):
+  - conversor-de-audio-e-video
+  - remover-fundo
+No terminal, dentro da pasta "Master Funções":
+    npx serve .
+ou
+    python -m http.server 8000
+e abra http://localhost:8000 (ou a porta que aparecer).
+No Cloudflare Pages os dois funcionam normalmente.
+
+
+ATENÇÃO
+-------
+1. remover-fundo usa a biblioteca @imgly/background-removal, que é licença
+   AGPL-3.0. Para usar num site com anúncios, o caminho mais simples é
+   publicar o código desse site como AGPL (ex.: repositório público no
+   GitHub com link no rodapé). A alternativa é comprar a licença comercial
+   da IMG.LY. Não sou advogado — confira antes de monetizar esse site.
+
+2. calculadora-trabalhista usa INSS 2026 (Portaria Interministerial MPS/MF
+   nº 13/2026, teto R$ 8.475,55) e IRRF com a redução da Lei 15.270/2025.
+   Essas tabelas mudam todo ano: atualize em janeiro de 2027. Os valores
+   ficam no topo do <script>, nas constantes INSS, IR, DEP e SIMP.
+
+3. conversor-de-moedas depende de uma API pública gratuita. Se ela sair do
+   ar, o site mostra uma mensagem de erro em vez da cotação.
+
+4. Para o AdSense aprovar, cada site ainda vai precisar de páginas de
+   Sobre, Contato e Política de Privacidade.
