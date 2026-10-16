@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conversor Base64, JSON, CSV e Timestamp — grátis e online</title>
+<meta name="description" content="Codifique e decodifique Base64 e URL, formate e valide JSON, converta CSV para JSON e transforme timestamp Unix em data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230891b2'/%3E%3C/svg%3E">
+<style>:root{--c:#0891b2;--c2:#06b6d4;--cl:#ecfeff;--tx:#0f172a;--mt:#64748b;--bd:#e2e8f0;--bg:#ffffff;--soft:#f8fafc;--err:#dc2626;--ok:#059669}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{border-bottom:3px solid var(--c2)}
+header.top .in{max-width:860px;margin:0 auto;padding:14px 16px;font-weight:700;color:var(--c);font-size:18px}
+main{max-width:860px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 6px}
+.lead{color:var(--mt);margin:0 0 22px}
+h2{font-size:19px;margin:32px 0 10px}
+.card{border:1px solid var(--bd);border-radius:12px;padding:20px;background:#fff}
+.card+.card{margin-top:16px}
+label{display:block;font-size:14px;font-weight:600;margin:12px 0 6px}
+label:first-child{margin-top:0}
+input[type=text],input[type=number],input[type=date],input:not([type]),select,textarea{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;font:inherit;color:inherit;background:#fff}
+textarea{min-height:160px;resize:vertical;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--c2);outline-offset:-1px;border-color:var(--c2)}
+input[type=range]{width:100%;accent-color:var(--c)}
+input[type=checkbox],input[type=radio]{accent-color:var(--c);margin:0}
+label:has(>input[type=checkbox]),label:has(>input[type=radio]){display:flex;align-items:center;gap:8px;font-weight:400;margin:8px 0}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 18px;border:0;border-radius:8px;background:var(--c);color:#fff;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{background:#0e7490}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--c);border:1px solid var(--c)}
+.btn.sec:hover{background:var(--cl)}
+.btn.sm{padding:6px 10px;font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.drop{border:2px dashed var(--c2);border-radius:12px;background:var(--cl);padding:28px 16px;text-align:center;cursor:pointer;color:var(--c);font-weight:600}
+.drop.over{background:#cffafe}
+.drop small{display:block;color:var(--mt);font-weight:400;margin-top:4px}
+.result{margin-top:16px;padding:16px;border-radius:10px;background:var(--cl);border-left:4px solid var(--c)}
+.big{font-size:28px;font-weight:700;color:var(--c);word-break:break-all}
+.muted{color:var(--mt);font-size:14px}
+.err{color:var(--err);font-size:14px;margin-top:10px}
+.list{list-style:none;padding:0;margin:12px 0 0}
+.list li{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin-top:6px;background:#fff}
+.list li .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:14px}
+.stat{background:var(--soft);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.stat b{display:block;font-size:22px;color:var(--c)}
+.stat span{font-size:13px;color:var(--mt)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{background:var(--soft);font-weight:600}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{padding:8px 14px;border:1px solid var(--bd);background:#fff;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;color:var(--tx)}
+.tabs button.on{background:var(--c);border-color:var(--c);color:#fff}
+.hide{display:none!important}
+.prev{max-width:100%;border:1px solid var(--bd);border-radius:8px;display:block;margin-top:12px}
+.howto{color:#334155}
+.howto li{margin:4px 0}
+footer{border-top:1px solid var(--bd);color:var(--mt);font-size:13px;text-align:center;padding:20px 16px}
+.bar{height:8px;background:var(--bd);border-radius:999px;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;background:var(--c2);width:0;transition:width .2s}
+@media(max-width:560px){h1{font-size:23px}.card{padding:16px}}</style>
+
+</head>
+<body>
+<header class="top"><div class="in">Conversor Base64, JSON, CSV e Timestamp</div></header>
+<main>
+<h1>Conversor Base64, JSON, CSV e Timestamp</h1>
+<p class="lead">Codifique e decodifique Base64 e URL, formate e valide JSON, converta CSV para JSON e transforme timestamp Unix em data.</p>
+<div class="tabs" id="tabs">
+  <button class="on" data-t="b64">Base64</button><button data-t="url">URL</button>
+  <button data-t="json">Formatar JSON</button><button data-t="csv">CSV ↔ JSON</button><button data-t="ts">Timestamp</button>
+</div>
+
+<div class="card" id="main">
+  <label for="in" id="inl">Entrada</label>
+  <textarea id="in"></textarea>
+  <div class="actions" id="acts"></div>
+  <label for="out">Resultado</label>
+  <textarea id="out" readonly></textarea>
+  <div id="err" class="err"></div>
+  <div class="actions"><button class="btn sec sm" id="copy">Copiar resultado</button></div>
+</div>
+
+<div class="card hide" id="tsbox">
+  <label for="ts">Timestamp Unix (segundos ou milissegundos)</label>
+  <input type="text" id="ts">
+  <div class="result" id="tsr"></div>
+  <label for="dt" style="margin-top:18px">Data e hora → timestamp</label>
+  <input type="datetime-local" id="dt" step="1" style="width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;font:inherit">
+  <div class="result" id="dtr"></div>
+  <div class="actions"><button class="btn sec sm" id="now">Usar agora</button></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const b64e = s => { const b = new TextEncoder().encode(s); let x = ""; for (let i = 0; i < b.length; i += 0x8000) x += String.fromCharCode(...b.subarray(i, i + 0x8000)); return btoa(x); };
+const b64d = s => { const x = atob(s.replace(/\s/g,"").replace(/-/g,"+").replace(/_/g,"/")); return new TextDecoder("utf-8", {fatal:true}).decode(Uint8Array.from(x, c => c.charCodeAt(0))); };
+function parseCSV(t){
+  const sep = (t.split("\n")[0].match(/;/g)||[]).length > (t.split("\n")[0].match(/,/g)||[]).length ? ";" : ",";
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++){
+    const c = t[i];
+    if (q){ if (c === '"'){ if (t[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === sep){ row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r"){ if (c === "\r" && t[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c;
+  }
+  if (f !== "" || row.length) { row.push(f); rows.push(row); }
+  const [h, ...d] = rows.filter(r => r.some(x => x !== ""));
+  return d.map(r => Object.fromEntries(h.map((k, i) => [k, r[i] ?? ""])));
+}
+function toCSV(j){
+  const arr = Array.isArray(j) ? j : [j];
+  const keys = [...new Set(arr.flatMap(o => Object.keys(o)))];
+  const cell = v => { v = v == null ? "" : typeof v === "object" ? JSON.stringify(v) : String(v); return /[",\n;]/.test(v) ? `"${v.replace(/"/g,'""')}"` : v; };
+  return [keys.map(cell).join(","), ...arr.map(o => keys.map(k => cell(o[k])).join(","))].join("\n");
+}
+const MODES = {
+  b64: {lab:"Texto ou Base64", a:{"Codificar →":b64e, "Decodificar →":b64d}},
+  url: {lab:"Texto ou URL", a:{"Codificar →":encodeURIComponent, "Decodificar →":decodeURIComponent}},
+  json:{lab:"JSON", a:{"Formatar":s => JSON.stringify(JSON.parse(s), null, 2), "Minificar":s => JSON.stringify(JSON.parse(s)), "Validar":s => (JSON.parse(s), "✓ JSON válido")}},
+  csv: {lab:"CSV ou JSON", a:{"CSV → JSON":s => JSON.stringify(parseCSV(s), null, 2), "JSON → CSV":s => toCSV(JSON.parse(s))}}
+};
+function setMode(m){
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("on", b.dataset.t === m));
+  $("main").classList.toggle("hide", m === "ts"); $("tsbox").classList.toggle("hide", m !== "ts");
+  if (m === "ts") return;
+  $("inl").textContent = MODES[m].lab; $("err").textContent = "";
+  $("acts").innerHTML = "";
+  for (const [name, fn] of Object.entries(MODES[m].a)){
+    const b = document.createElement("button"); b.className = "btn"; b.textContent = name;
+    b.onclick = () => { try { $("out").value = fn($("in").value); $("err").textContent = ""; } catch (e) { $("out").value = ""; $("err").textContent = "Não foi possível converter: " + e.message; } };
+    $("acts").appendChild(b);
+  }
+}
+$("tabs").onclick = e => e.target.dataset.t && setMode(e.target.dataset.t);
+$("copy").onclick = () => navigator.clipboard.writeText($("out").value);
+// timestamp
+const fmtD = d => d.toLocaleString("pt-BR", {dateStyle:"full", timeStyle:"medium"});
+$("ts").oninput = () => {
+  const v = $("ts").value.trim(); if (!/^-?\d+$/.test(v)) { $("tsr").textContent = v ? "Digite só números." : ""; return; }
+  const ms = v.length > 11 ? +v : +v * 1000, d = new Date(ms);
+  $("tsr").innerHTML = `<b>Horário local:</b> ${fmtD(d)}<br><b>UTC:</b> ${d.toUTCString()}<br><b>ISO 8601:</b> ${d.toISOString()}`;
+};
+$("dt").oninput = () => { const d = new Date($("dt").value); $("dtr").innerHTML = isNaN(d) ? "" : `<b>Segundos:</b> ${Math.floor(d/1000)}<br><b>Milissegundos:</b> ${+d}`; };
+$("now").onclick = () => { const n = new Date(); $("ts").value = Math.floor(n/1000); $("ts").oninput();
+  $("dt").value = new Date(n - n.getTimezoneOffset()*60000).toISOString().slice(0,19); $("dt").oninput(); };
+setMode("b64");
+</script>
+</main>
+<footer>Ferramenta gratuita. Seus arquivos são processados no seu próprio navegador e não são enviados para nenhum servidor.</footer>
+</body>
+</html>

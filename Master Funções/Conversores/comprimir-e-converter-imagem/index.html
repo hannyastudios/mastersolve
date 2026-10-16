@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comprimir e Converter Imagem — grátis e online</title>
+<meta name="description" content="Reduza o tamanho de fotos e converta entre JPG, PNG e WebP em lote, direto no navegador. Sem upload e sem limite de arquivos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230891b2'/%3E%3C/svg%3E">
+<style>:root{--c:#0891b2;--c2:#06b6d4;--cl:#ecfeff;--tx:#0f172a;--mt:#64748b;--bd:#e2e8f0;--bg:#ffffff;--soft:#f8fafc;--err:#dc2626;--ok:#059669}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{border-bottom:3px solid var(--c2)}
+header.top .in{max-width:860px;margin:0 auto;padding:14px 16px;font-weight:700;color:var(--c);font-size:18px}
+main{max-width:860px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:28px;line-height:1.2;margin:8px 0 6px}
+.lead{color:var(--mt);margin:0 0 22px}
+h2{font-size:19px;margin:32px 0 10px}
+.card{border:1px solid var(--bd);border-radius:12px;padding:20px;background:#fff}
+.card+.card{margin-top:16px}
+label{display:block;font-size:14px;font-weight:600;margin:12px 0 6px}
+label:first-child{margin-top:0}
+input[type=text],input[type=number],input[type=date],input:not([type]),select,textarea{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:8px;font:inherit;color:inherit;background:#fff}
+textarea{min-height:160px;resize:vertical;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--c2);outline-offset:-1px;border-color:var(--c2)}
+input[type=range]{width:100%;accent-color:var(--c)}
+input[type=checkbox],input[type=radio]{accent-color:var(--c);margin:0}
+label:has(>input[type=checkbox]),label:has(>input[type=radio]){display:flex;align-items:center;gap:8px;font-weight:400;margin:8px 0}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 18px;border:0;border-radius:8px;background:var(--c);color:#fff;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{background:#0e7490}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sec{background:#fff;color:var(--c);border:1px solid var(--c)}
+.btn.sec:hover{background:var(--cl)}
+.btn.sm{padding:6px 10px;font-size:14px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.drop{border:2px dashed var(--c2);border-radius:12px;background:var(--cl);padding:28px 16px;text-align:center;cursor:pointer;color:var(--c);font-weight:600}
+.drop.over{background:#cffafe}
+.drop small{display:block;color:var(--mt);font-weight:400;margin-top:4px}
+.result{margin-top:16px;padding:16px;border-radius:10px;background:var(--cl);border-left:4px solid var(--c)}
+.big{font-size:28px;font-weight:700;color:var(--c);word-break:break-all}
+.muted{color:var(--mt);font-size:14px}
+.err{color:var(--err);font-size:14px;margin-top:10px}
+.list{list-style:none;padding:0;margin:12px 0 0}
+.list li{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;margin-top:6px;background:#fff}
+.list li .nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:14px}
+.stat{background:var(--soft);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.stat b{display:block;font-size:22px;color:var(--c)}
+.stat span{font-size:13px;color:var(--mt)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{background:var(--soft);font-weight:600}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tabs button{padding:8px 14px;border:1px solid var(--bd);background:#fff;border-radius:999px;font:inherit;font-size:14px;cursor:pointer;color:var(--tx)}
+.tabs button.on{background:var(--c);border-color:var(--c);color:#fff}
+.hide{display:none!important}
+.prev{max-width:100%;border:1px solid var(--bd);border-radius:8px;display:block;margin-top:12px}
+.howto{color:#334155}
+.howto li{margin:4px 0}
+footer{border-top:1px solid var(--bd);color:var(--mt);font-size:13px;text-align:center;padding:20px 16px}
+.bar{height:8px;background:var(--bd);border-radius:999px;overflow:hidden;margin-top:10px}
+.bar>i{display:block;height:100%;background:var(--c2);width:0;transition:width .2s}
+@media(max-width:560px){h1{font-size:23px}.card{padding:16px}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+<header class="top"><div class="in">Comprimir e Converter Imagem</div></header>
+<main>
+<h1>Comprimir e Converter Imagem</h1>
+<p class="lead">Reduza o tamanho de fotos e converta entre JPG, PNG e WebP em lote, direto no navegador. Sem upload e sem limite de arquivos.</p>
+<div class="card">
+  <div class="drop" id="drop">Clique ou arraste imagens aqui<small>JPG, PNG, WebP, GIF, BMP — várias de uma vez</small></div>
+  <input type="file" id="f" accept="image/*" multiple hidden>
+  <div class="row" style="margin-top:8px">
+    <div><label for="fmt">Converter para</label>
+      <select id="fmt"><option value="image/jpeg">JPG</option><option value="image/webp" selected>WebP (menor)</option><option value="image/png">PNG (sem perda)</option></select></div>
+    <div><label for="q">Qualidade: <span id="qv">80</span>%</label><input type="range" id="q" min="10" max="100" value="80"></div>
+    <div><label for="mw">Largura máxima (px, opcional)</label><input type="number" id="mw" placeholder="ex.: 1920" min="1"></div>
+  </div>
+  <ul class="list" id="list"></ul>
+  <div id="tot" class="muted" style="margin-top:10px"></div>
+  <div class="actions">
+    <button class="btn" id="go" disabled>Processar imagens</button>
+    <button class="btn sec" id="zip" disabled>Baixar todas (.zip)</button>
+    <button class="btn sec" id="clr">Limpar</button>
+  </div>
+</div>
+
+<h2>Dicas</h2>
+<ul class="howto">
+  <li><b>WebP</b> com qualidade 75–85% costuma reduzir fotos em 60% a 80% sem diferença visível.</li>
+  <li><b>JPG</b> é o formato mais compatível para enviar por WhatsApp, e-mail e formulários.</li>
+  <li><b>PNG</b> não perde qualidade, mas é maior. Use para logotipos e imagens com transparência.</li>
+  <li>Ao converter PNG transparente para JPG, o fundo fica branco.</li>
+</ul>
+
+<script>
+const $ = id => document.getElementById(id);
+let files = [], outs = [];
+const kb = b => b > 1048576 ? (b/1048576).toFixed(2).replace(".",",") + " MB" : Math.round(b/1024) + " KB";
+const ext = {"image/jpeg":"jpg","image/webp":"webp","image/png":"png"};
+function render(){
+  $("list").innerHTML = files.map((f, i) => {
+    const o = outs[i];
+    const info = o ? `${kb(f.size)} → <b>${kb(o.size)}</b> (${o.size < f.size ? "−" + Math.round(100 - o.size/f.size*100) + "%" : "+" + Math.round(o.size/f.size*100 - 100) + "%"})` : kb(f.size);
+    return `<li><span class="nm">${f.name}</span><span class="muted">${info}</span>${o ? `<a class="btn sm" href="${o.url}" download="${o.name}">Baixar</a>` : ""}</li>`;
+  }).join("");
+  $("go").disabled = !files.length; $("zip").disabled = !outs.filter(Boolean).length;
+  const a = files.reduce((s, f) => s + f.size, 0), b = outs.reduce((s, o) => s + (o ? o.size : 0), 0);
+  $("tot").textContent = b ? `Total: ${kb(a)} → ${kb(b)}` : files.length ? `${files.length} imagem(ns), ${kb(a)}` : "";
+}
+function add(list){ files.push(...[...list].filter(f => f.type.startsWith("image/"))); outs = []; render(); }
+async function convert(file){
+  const img = await createImageBitmap(file);
+  let w = img.width, h = img.height; const mw = +$("mw").value;
+  if (mw && w > mw){ h = Math.round(h * mw / w); w = mw; }
+  const c = document.createElement("canvas"); c.width = w; c.height = h;
+  const x = c.getContext("2d"), type = $("fmt").value;
+  if (type === "image/jpeg"){ x.fillStyle = "#fff"; x.fillRect(0, 0, w, h); }
+  x.drawImage(img, 0, 0, w, h);
+  const blob = await new Promise(r => c.toBlob(r, type, +$("q").value / 100));
+  return {blob, size: blob.size, url: URL.createObjectURL(blob), name: file.name.replace(/\.[^.]+$/, "") + "." + ext[blob.type || type]};
+}
+$("go").onclick = async () => {
+  $("go").disabled = true; outs.forEach(o => o && URL.revokeObjectURL(o.url)); outs = [];
+  for (let i = 0; i < files.length; i++){
+    $("go").textContent = `Processando ${i + 1}/${files.length}…`;
+    try { outs[i] = await convert(files[i]); } catch (e) { outs[i] = null; }
+    render();
+  }
+  $("go").textContent = "Processar imagens"; $("go").disabled = false;
+};
+$("zip").onclick = async () => {
+  const z = new JSZip(), used = {};
+  outs.filter(Boolean).forEach(o => { let n = o.name; while (used[n]) n = "copia-" + n; used[n] = 1; z.file(n, o.blob); });
+  const blob = await z.generateAsync({type: "blob"}), a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = "imagens.zip"; a.click();
+};
+$("clr").onclick = () => { files = []; outs = []; render(); };
+$("q").oninput = () => $("qv").textContent = $("q").value;
+const d = $("drop");
+d.onclick = () => $("f").click();
+$("f").onchange = e => { add(e.target.files); e.target.value = ""; };
+d.ondragover = e => { e.preventDefault(); d.classList.add("over"); };
+d.ondragleave = () => d.classList.remove("over");
+d.ondrop = e => { e.preventDefault(); d.classList.remove("over"); add(e.dataTransfer.files); };
+render();
+</script>
+</main>
+<footer>Ferramenta gratuita. Seus arquivos são processados no seu próprio navegador e não são enviados para nenhum servidor.</footer>
+</body>
+</html>
