@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Evita que buscadores gastem rastreamento em arquivos internos
+Disallow: /ffmpeg/
+
+Sitemap: https://mastersolve.com.br/sitemap.xml
